@@ -3,41 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HW_7.Interface;
 
 namespace HW_7.Accessories
 {
-    public class CPUAccessories
+    public class CPUAccessories : IAccessorise
     {
-        private readonly string[] _cpuName = new string[3];
-        private readonly string[] _cpuСountry = new string[3];
-        private readonly int[] _cpuPrice = new int[3];
-
         public CPUAccessories()
         {
-            _cpuName[0] = "AMD x2";
-            _cpuName[1] = "AMD x4";
-            _cpuName[2] = "Intel x8";
-            _cpuСountry[0] = "Taiwan";
-            _cpuСountry[1] = "China";
-            _cpuСountry[2] = "Japan";
-            _cpuPrice[0] = 40;
-            _cpuPrice[1] = 100;
-            _cpuPrice[2] = 150;
+            CpuName[0] = "AMD x2";
+            CpuName[1] = "AMD x4";
+            CpuName[2] = "Intel x8";
+            CpuCountry[0] = "Taiwan";
+            CpuCountry[1] = "China";
+            CpuCountry[2] = "Japan";
+            CpuPrice[0] = "40";
+            CpuPrice[1] = "100";
+            CpuPrice[2] = "150";
         }
 
-        public string[] CpuName
-        {
-            get { return _cpuName; }
-        }
+        public string[] CpuName { get; } = new string[3];
 
-        public string[] CpuCountry
-        {
-            get { return _cpuСountry; }
-        }
+        public string[] CpuCountry { get; } = new string[3];
 
-        public int[] CpuPrice
-        {
-            get { return _cpuPrice; }
-        }
+        public string[] CpuPrice { get; } = new string[3];
     }
 }

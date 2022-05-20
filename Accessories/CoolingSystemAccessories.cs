@@ -3,41 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HW_7.Interface;
 
 namespace HW_7.Accessories
 {
-    public class CoolingSystemAccessories
+    public class CoolingSystemAccessories : IAccessorise
     {
-        private readonly string[] _coolName = new string[3];
-        private readonly string[] _coolСountry = new string[3];
-        private readonly int[] _coolPrice = new int[3];
-
         public CoolingSystemAccessories()
         {
-            _coolName[0] = "Standard cooling";
-            _coolName[1] = "Quiet cooling";
-            _coolName[2] = "Water cooling";
-            _coolСountry[0] = "Taiwan";
-            _coolСountry[1] = "China";
-            _coolСountry[2] = "Japan";
-            _coolPrice[0] = 20;
-            _coolPrice[1] = 50;
-            _coolPrice[2] = 100;
+            CoolName[0] = "Standard cooling";
+            CoolName[1] = "Quiet cooling";
+            CoolName[2] = "Water cooling";
+            CoolCountry[0] = "Taiwan";
+            CoolCountry[1] = "China";
+            CoolCountry[2] = "Japan";
+            CoolPrice[0] = "20";
+            CoolPrice[1] = "50";
+            CoolPrice[2] = "100";
         }
 
-        public string[] CoolName
-        {
-            get { return _coolName; }
-        }
+        public string[] CoolName { get; } = new string[3];
 
-        public string[] CoolCountry
-        {
-            get { return _coolСountry; }
-        }
+        public string[] CoolCountry { get; } = new string[3];
 
-        public int[] CoolPrice
-        {
-            get { return _coolPrice; }
-        }
+        public string[] CoolPrice { get; } = new string[3];
     }
 }

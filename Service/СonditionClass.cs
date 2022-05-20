@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HW_7
+namespace HW_7.Service
 {
     public static class СonditionClass
     {
-        public static void Сondition(this HW_7.Worker.Worker worker)
+        public static void Сondition(this Worker worker)
         {
             Console.WriteLine("Hello, choose one of three configurations: budget, medium, top.");
 

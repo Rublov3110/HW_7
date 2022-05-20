@@ -3,41 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HW_7.Interface;
 
 namespace HW_7.Accessories
 {
-    public class DataStorageAccessories
+    public class DataStorageAccessories : IAccessorise
     {
-        private readonly string[] _dataStorageName = new string[3];
-        private readonly string[] _dataStorageСountry = new string[3];
-        private readonly int[] _dataStoragePrice = new int[3];
-
         public DataStorageAccessories()
         {
-            _dataStorageName[0] = "HDD 1T";
-            _dataStorageName[1] = "SSD 500Gb";
-            _dataStorageName[2] = "SSD M2 500Gb";
-            _dataStorageСountry[0] = "Taiwan";
-            _dataStorageСountry[1] = "China";
-            _dataStorageСountry[2] = "Japan";
-            _dataStoragePrice[0] = 20;
-            _dataStoragePrice[1] = 60;
-            _dataStoragePrice[2] = 150;
+            DataStorageName[0] = "HDD 1T";
+            DataStorageName[1] = "SSD 500Gb";
+            DataStorageName[2] = "SSD M2 500Gb";
+            DataStorageCountry[0] = "Taiwan";
+            DataStorageCountry[1] = "China";
+            DataStorageCountry[2] = "Japan";
+            DataStoragePrice[0] = "20";
+            DataStoragePrice[1] = "60";
+            DataStoragePrice[2] = "150";
         }
 
-        public string[] DataStorageName
-        {
-            get { return _dataStorageName; }
-        }
+        public string[] DataStorageName { get; } = new string[3];
 
-        public string[] DataStorageCountry
-        {
-            get { return _dataStorageСountry; }
-        }
+        public string[] DataStorageCountry { get; } = new string[3];
 
-        public int[] DataStoragePrice
-        {
-            get { return _dataStoragePrice; }
-        }
+        public string[] DataStoragePrice { get; } = new string[3];
     }
 }

@@ -12,7 +12,7 @@ namespace HW_7.PC.MotherboardDerivative
         public string? Name { get; set; }
         public string? Countru { get; set; }
 
-        public int Prise { get; set; }
+        public string? Prise { get; set; }
 
         public override void Get()
         {

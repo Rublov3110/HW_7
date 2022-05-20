@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HW_7.Worker
+namespace HW_7.Interface
 {
-    public interface IMake
+    public interface IAccessorise
     {
-        public void Make(int value);
     }
 }

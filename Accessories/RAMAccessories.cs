@@ -3,41 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HW_7.Interface;
 
 namespace HW_7.Accessories
 {
-    public class RAMAccessories
+    public class RAMAccessories : IAccessorise
     {
-        private readonly string[] _ramName = new string[3];
-        private readonly string[] _ramСountry = new string[3];
-        private readonly int[] _ramPrice = new int[3];
-
         public RAMAccessories()
         {
-            _ramName[0] = "NouName 4GB";
-            _ramName[1] = "Samsung 8GB";
-            _ramName[2] = "Kingston 16GB";
-            _ramСountry[0] = "Taiwan";
-            _ramСountry[1] = "China";
-            _ramСountry[2] = "Japan";
-            _ramPrice[0] = 20;
-            _ramPrice[1] = 50;
-            _ramPrice[2] = 100;
+            RamName[0] = "NouName 4GB";
+            RamName[1] = "Samsung 8GB";
+            RamName[2] = "Kingston 16GB";
+            RamCountry[0] = "Taiwan";
+            RamCountry[1] = "China";
+            RamCountry[2] = "Japan";
+            RamPrice[0] = "20";
+            RamPrice[1] = "50";
+            RamPrice[2] = "100";
         }
 
-        public string[] RamName
-        {
-            get { return _ramName; }
-        }
+        public string[] RamName { get; } = new string[3];
 
-        public string[] RamCountry
-        {
-            get { return _ramСountry; }
-        }
+        public string[] RamCountry { get; } = new string[3];
 
-        public int[] RamPrice
-        {
-            get { return _ramPrice; }
-        }
+        public string[] RamPrice { get; } = new string[3];
     }
 }
